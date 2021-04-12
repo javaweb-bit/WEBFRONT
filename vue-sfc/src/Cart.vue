@@ -6,7 +6,8 @@
             <h2>전체 목록</h2>
             <!-- v-for : Collection 모델을 루프 -->
             <ul>
-                <li v-for="item in items">{{ item.name }}</li>
+                <!-- 가급적 key 값은 해당 데이터의 유일 식별자로 설정 -->
+                <li v-for="(item, index) in items" v-bind:key="index">{{ item.name }}</li>
             </ul>
         </div>
         <!-- 살 물건들 -->
